@@ -157,6 +157,11 @@ body {
   margin: 20px auto;
   display: flex;
 }
+@media (max-width: 500px) {
+  .main {
+    margin: 0;
+  }
+}
 .main h2 {
   font-weight: 700;
   font-family: 'Quicksand', sans-serif;
@@ -178,6 +183,7 @@ body {
     top: 26px;
     left: 13%;
     position: absolute;
+    width: 300px;
   }
 }
 .main nav {
@@ -195,10 +201,11 @@ body {
 }
 @media (max-width: 500px) {
   .main nav {
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
-    height: 6vh;
+    height: 10vh;
     top: 8rem;
+    width: 100%;
   }
 }
 .main nav a {
@@ -214,7 +221,6 @@ body {
 .main-body {
   display: flex;
   justify-content: space-evenly;
-  height: 70vh;
   width: 80vw;
   margin: 20px auto 120px;
   align-items: flex-end;
@@ -222,11 +228,12 @@ body {
 @media (max-width: 500px) {
   .main-body {
     flex-direction: column;
+    width: 100vw;
   }
 }
 .main-body .box {
   background-color: #eee;
-  padding: 40px;
+  padding: 32px;
   margin: 20px 20px 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 1;
@@ -250,8 +257,27 @@ body {
   line-height: 1.5rem;
   margin-bottom: 20px;
 }
+@media (max-width: 500px) {
+  .main-body p,
+  .main-body li {
+    font-size: 0.9rem !important;
+    line-height: 1rem;
+  }
+}
 section#life-story.main-body {
-  margin-top: 200px;
+  margin-top: 100px;
+}
+section#life-story.main-body .box {
+  margin: 0;
+}
+@media (max-width: 500px) {
+  section#life-story.main-body img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: -40px;
+  }
 }
 section#skills.main-body {
   background-image: url("../images/Konohagakure_Post_War.png");
@@ -262,19 +288,39 @@ section#skills.main-body {
   width: 100%;
   position: relative;
   align-items: center;
-  margin-top: -124px;
+}
+@media (max-width: 500px) {
+  section#skills.main-body {
+    width: 100vw;
+  }
+}
+section#skills.main-body .box {
+  width: 100%;
+  margin: 0;
 }
 section#skills.main-body img.naturo-rasengan {
   position: absolute;
   width: 30rem;
   top: -11%;
-  right: 15%;
-  z-index: 3;
+  right: 25%;
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  section#skills.main-body img.naturo-rasengan {
+    right: -4%;
+    top: -70px;
+    width: 50%;
+  }
 }
 section#friends.main {
   height: 70vh;
   width: 100vw;
   position: relative;
+}
+@media (max-width: 500px) {
+  section#friends.main {
+    flex-direction: column;
+  }
 }
 section#friends.main h2.friends-title {
   position: absolute;
@@ -296,6 +342,12 @@ section#friends.main .naruto-friend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb68c', endColorstr='#cc8d76', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
+@media (max-width: 500px) {
+  section#friends.main .naruto-friend {
+    width: 100%;
+    padding: 50px;
+  }
+}
 section#friends.main .naruto-friend img {
   max-width: 100%;
   background: #eee;
@@ -307,6 +359,11 @@ section#friends.main p {
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  section#friends.main p {
+    font-size: 0.9rem !important;
+  }
 }
 section#footer.main {
   margin-top: 800px;

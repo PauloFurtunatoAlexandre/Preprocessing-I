@@ -95,6 +95,10 @@ body {
 	margin: 20px auto;
 	display: flex;
 
+	@media(max-width: 500px) {
+		margin: 0;
+	}
+
 	h2 {
 		.title-text();
 		font-size: 3rem;
@@ -114,6 +118,7 @@ body {
 			top: 26px;
 			left: 13%;
 			position: absolute;
+			width: 300px;
 		}
 	}
 
@@ -131,10 +136,11 @@ body {
 		z-index: 2;
 
 		@media (max-width: 500px) {
-			flex-direction: column;
+			flex-direction: row;
 			position: absolute;
-			height: 6vh;
+			height: 10vh;
 			top: 8rem;
+			width: 100%;
 		}
 
 		a {
@@ -151,18 +157,18 @@ body {
 .main-body {
 	display: flex;
 	justify-content: space-evenly;
-	height: 70vh;
 	width: 80vw;
 	margin: 20px auto 120px;
 	align-items: flex-end;
 
 	@media (max-width: 500px) {
 		flex-direction: column;
+		width: 100vw;
 	}
 
 	.box {
 		background-color: #eee;
-		padding: 40px;
+		padding: 32px;
 		margin: 20px 20px 0;
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		z-index: 1;
@@ -183,11 +189,30 @@ body {
 		font-size: 1rem;
 		line-height: 1.5rem;
 		margin-bottom: @margin-bottom;
+
+		@media (max-width:500px) {
+			font-size: 0.9rem !important;
+			line-height: 1rem;
+		}
 	}
 }
 
 section#life-story.main-body {
-	margin-top: 200px;
+	margin-top: 100px;
+
+	.box {
+		margin: 0;
+	}
+
+	img {
+		@media (max-width: 500px) {
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+			margin-top: 90px;
+			margin-bottom: -40px;
+		}
+	}
 }
 
 section#skills.main-body {
@@ -199,14 +224,29 @@ section#skills.main-body {
 	width: 100%;
 	position: relative;
 	align-items: center;
-	margin-top: -124px;
+
+	@media (max-width: 500px) {
+		width: 100vw;
+	}
+
+
+	.box {
+		width: 100%;
+		margin: 0;
+	}
 
 	img.naturo-rasengan {
 		position: absolute;
 		width: 30rem;
 		top: -11%;
-		right: 15%;
-		z-index: 3;
+		right: 25%;
+		z-index: 1;
+
+		@media (max-width: 500px) {
+			right: -4%;
+			top: -70px;
+			width: 50%;
+		}
 	}
 }
 
@@ -215,6 +255,10 @@ section#friends.main {
 	height: 70vh;
 	width: 100vw;
 	position: relative;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
 
 	h2.friends-title {
 		position: absolute;
@@ -232,6 +276,10 @@ section#friends.main {
 		background: linear-gradient(135deg,  #ffb68c 0%,#cc8d76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb68c', endColorstr='#cc8d76',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+		@media (max-width: 500px) {
+			width: 100%;
+			padding: 50px;
+		}
 
 		img {
 			max-width: 100%;
@@ -245,6 +293,10 @@ section#friends.main {
 		font-size: 1rem;
 		line-height: 1.5rem;
 		margin-bottom: @margin-bottom;
+
+		@media (max-width:500px) {
+			font-size: 0.9rem !important;
+		}
 	}
 }
 
