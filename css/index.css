@@ -173,6 +173,13 @@ body {
   z-index: 3;
   transform: rotate(350deg);
 }
+@media (max-width: 500px) {
+  .main .logo-naruto {
+    top: 26px;
+    left: 13%;
+    position: absolute;
+  }
+}
 .main nav {
   align-items: center;
   position: fixed;
@@ -185,6 +192,14 @@ body {
   margin-top: 20px;
   border-top: 20px solid #f05321;
   z-index: 2;
+}
+@media (max-width: 500px) {
+  .main nav {
+    flex-direction: column;
+    position: absolute;
+    height: 6vh;
+    top: 8rem;
+  }
 }
 .main nav a {
   color: #fff;
@@ -204,12 +219,22 @@ body {
   margin: 20px auto 120px;
   align-items: flex-end;
 }
+@media (max-width: 500px) {
+  .main-body {
+    flex-direction: column;
+  }
+}
 .main-body .box {
   background-color: #eee;
   padding: 40px;
   margin: 20px 20px 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 1;
+}
+@media (max-width: 500px) {
+  .main-body .box {
+    width: 100%;
+  }
 }
 .main-body h2 {
   font-weight: 700;
