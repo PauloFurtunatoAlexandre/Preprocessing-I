@@ -95,7 +95,7 @@ body {
 	margin: 20px auto;
 	display: flex;
 
-	@media(max-width: 500px) {
+	@media(max-width: 1200px) {
 		margin: 0;
 	}
 
@@ -114,10 +114,10 @@ body {
 		width: 400px;
 		z-index: 3;
 		transform: rotate(350deg);
-		@media (max-width: 500px) {
+		@media (max-width: 1200px) {
 			top: 26px;
 			left: 13%;
-			position: absolute;
+			position: fixed;
 			width: 300px;
 		}
 	}
@@ -135,9 +135,9 @@ body {
 		border-top: 20px solid @link-hover;
 		z-index: 2;
 
-		@media (max-width: 500px) {
+		@media (max-width: 1200px) {
 			flex-direction: row;
-			position: absolute;
+			// position: absolute;
 			height: 10vh;
 			top: 8rem;
 			width: 100%;
@@ -161,7 +161,7 @@ body {
 	margin: 20px auto 120px;
 	align-items: flex-end;
 
-	@media (max-width: 500px) {
+	@media (max-width: 1200px) {
 		flex-direction: column;
 		width: 100vw;
 	}
@@ -173,7 +173,7 @@ body {
 		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		z-index: 1;
 
-		@media (max-width: 500px) {
+		@media (max-width: 1200px) {
 			width: 100%;
 		}
 	}
@@ -190,7 +190,7 @@ body {
 		line-height: 1.5rem;
 		margin-bottom: @margin-bottom;
 
-		@media (max-width:500px) {
+		@media (max-width:1200px) {
 			font-size: 0.9rem !important;
 			line-height: 1rem;
 		}
@@ -205,7 +205,7 @@ section#life-story.main-body {
 	}
 
 	img {
-		@media (max-width: 500px) {
+		@media (max-width: 1200px) {
 			margin: 0 auto;
 			display: block;
 			width: 100%;
@@ -225,13 +225,13 @@ section#skills.main-body {
 	position: relative;
 	align-items: center;
 
-	@media (max-width: 500px) {
+	@media (max-width: 1200px) {
 		width: 100vw;
 	}
 
 
 	.box {
-		width: 100%;
+		// width: 100%;
 		margin: 0;
 	}
 
@@ -242,9 +242,9 @@ section#skills.main-body {
 		right: 25%;
 		z-index: 1;
 
-		@media (max-width: 500px) {
-			right: -4%;
-			top: -70px;
+		@media (max-width: 1200px) {
+			right: 2%;
+			top: -45px;
 			width: 50%;
 		}
 	}
@@ -256,7 +256,7 @@ section#friends.main {
 	width: 100vw;
 	position: relative;
 
-	@media (max-width: 500px) {
+	@media (max-width: 1200px) {
 		flex-direction: column;
 	}
 
@@ -276,7 +276,7 @@ section#friends.main {
 		background: linear-gradient(135deg,  #ffb68c 0%,#cc8d76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb68c', endColorstr='#cc8d76',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-		@media (max-width: 500px) {
+		@media (max-width: 1200px) {
 			width: 100%;
 			padding: 50px;
 		}
@@ -294,7 +294,7 @@ section#friends.main {
 		line-height: 1.5rem;
 		margin-bottom: @margin-bottom;
 
-		@media (max-width:500px) {
+		@media (max-width:1200px) {
 			font-size: 0.9rem !important;
 		}
 	}
