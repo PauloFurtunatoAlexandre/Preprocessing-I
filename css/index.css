@@ -327,7 +327,7 @@ section#friends.main h2.friends-title {
   transform: translate(-50%, -100%);
 }
 section#friends.main .naruto-friend {
-  padding: 100px;
+  padding: 50px;
   width: 33vw;
   background: #ffb68c;
   /* Old browsers */
