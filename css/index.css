@@ -157,7 +157,7 @@ body {
   margin: 20px auto;
   display: flex;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main {
     margin: 0;
   }
@@ -178,7 +178,7 @@ body {
   z-index: 3;
   transform: rotate(350deg);
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main .logo-naruto {
     top: 26px;
     left: 13%;
@@ -199,7 +199,7 @@ body {
   border-top: 20px solid #f05321;
   z-index: 2;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main nav {
     flex-direction: row;
     height: 10vh;
@@ -224,7 +224,7 @@ body {
   margin: 20px auto 120px;
   align-items: flex-end;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main-body {
     flex-direction: column;
     width: 100vw;
@@ -237,7 +237,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 1;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main-body .box {
     width: 100%;
   }
@@ -256,7 +256,7 @@ body {
   line-height: 1.5rem;
   margin-bottom: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .main-body p,
   .main-body li {
     font-size: 0.9rem !important;
@@ -269,7 +269,7 @@ section#life-story.main-body {
 section#life-story.main-body .box {
   margin: 0;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#life-story.main-body img {
     margin: 0 auto;
     display: block;
@@ -288,7 +288,7 @@ section#skills.main-body {
   position: relative;
   align-items: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#skills.main-body {
     width: 100vw;
   }
@@ -303,7 +303,7 @@ section#skills.main-body img.naturo-rasengan {
   right: 25%;
   z-index: 1;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#skills.main-body img.naturo-rasengan {
     right: 2%;
     top: -45px;
@@ -315,7 +315,7 @@ section#friends.main {
   width: 100vw;
   position: relative;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#friends.main {
     flex-direction: column;
   }
@@ -340,7 +340,7 @@ section#friends.main .naruto-friend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb68c', endColorstr='#cc8d76', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#friends.main .naruto-friend {
     width: 100%;
     padding: 50px;
@@ -358,7 +358,7 @@ section#friends.main p {
   line-height: 1.5rem;
   margin-bottom: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   section#friends.main p {
     font-size: 0.9rem !important;
   }
@@ -375,8 +375,16 @@ section#footer.main footer {
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 section#footer.main footer p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+section#footer.main footer address a {
+  text-decoration: none;
+  color: white;
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
 }
