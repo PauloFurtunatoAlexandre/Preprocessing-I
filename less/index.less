@@ -54,6 +54,276 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+
+}
+//adding LESS 
+@link-color: #fff;
+@background-main-color: #363636;
+@link-hover: #f05321;
+@font-family: 'Quicksand', sans-serif;
+@margin-bottom: 20px;
+
+//Mixins
+.top-links {
+	color: @link-color;
+	padding: 20px;
+	text-decoration: none;
 }
 
+.main-body-text {
+	font-family: @font-family;
+	font-weight: 400;
+}
+
+.title-text {
+	font-weight: 700;
+	font-family: @font-family;
+}
+
+
+//styles
+
+body {
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+}
+
+.main {
+	width: 80vw;
+	margin: 20px auto;
+	display: flex;
+
+	@media(max-width: 500px) {
+		margin: 0;
+	}
+
+	h2 {
+		.title-text();
+		font-size: 3rem;
+		margin-bottom: @margin-bottom;
+	}
+
+	.logo-naruto {
+		position: fixed;
+		display: block;
+		left: 5%;
+		top: 20px;
+		height: auto;
+		width: 400px;
+		z-index: 3;
+		transform: rotate(350deg);
+		@media (max-width: 500px) {
+			top: 26px;
+			left: 13%;
+			position: fixed;
+			width: 300px;
+		}
+	}
+
+	nav {
+		align-items: center;
+		position: fixed;
+		height: 3vh;
+		display: flex;
+		justify-content: center;
+		background-color: @background-main-color;
+		padding: 20px;
+		width: 80%;
+		margin-top: 20px;
+		border-top: 20px solid @link-hover;
+		z-index: 2;
+
+		@media (max-width: 500px) {
+			flex-direction: row;
+			// position: absolute;
+			height: 10vh;
+			top: 8rem;
+			width: 100%;
+		}
+
+		a {
+			.top-links();
+			.main-body-text();
+
+			&:hover {
+				color: @link-hover;
+			}
+		}
+	}
+}
+
+.main-body {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80vw;
+	margin: 20px auto 120px;
+	align-items: flex-end;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		width: 100vw;
+	}
+
+	.box {
+		background-color: #eee;
+		padding: 32px;
+		margin: 20px 20px 0;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		z-index: 1;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+	}
+
+	h2 {
+		.title-text();
+		font-size: 3rem;
+		margin-bottom: @margin-bottom;
+	}
+
+	p, li {
+		.main-body-text();
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin-bottom: @margin-bottom;
+
+		@media (max-width:500px) {
+			font-size: 0.9rem !important;
+			line-height: 1rem;
+		}
+	}
+}
+
+section#life-story.main-body {
+	margin-top: 100px;
+
+	.box {
+		margin: 0;
+	}
+
+	img {
+		@media (max-width: 500px) {
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+			margin-top: 90px;
+			margin-bottom: -40px;
+		}
+	}
+}
+
+section#skills.main-body {
+	background-image: url("../images/Konohagakure_Post_War.png");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	align-items: center;
+
+	@media (max-width: 500px) {
+		width: 100vw;
+	}
+
+
+	.box {
+		// width: 100%;
+		margin: 0;
+	}
+
+	img.naturo-rasengan {
+		position: absolute;
+		width: 30rem;
+		top: -11%;
+		right: 25%;
+		z-index: 1;
+
+		@media (max-width: 500px) {
+			right: 2%;
+			top: -45px;
+			width: 50%;
+		}
+	}
+}
+
+section#friends.main {
+	// margin-top: 100px;
+	height: 70vh;
+	width: 100vw;
+	position: relative;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+
+	h2.friends-title {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -100%);
+	}
+
+	.naruto-friend {
+		padding: 50px;
+		width: 33vw;
+		background: #ffb68c; /* Old browsers */
+		background: -moz-linear-gradient(-45deg,  #ffb68c 0%, #cc8d76 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg,  #ffb68c 0%,#cc8d76 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg,  #ffb68c 0%,#cc8d76 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb68c', endColorstr='#cc8d76',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+		@media (max-width: 500px) {
+			width: 100%;
+			padding: 50px;
+		}
+
+		img {
+			max-width: 100%;
+			background: #eee;
+			padding: 60px;
+		}
+	}
+
+	p {
+		.main-body-text();
+		font-size: 1rem;
+		line-height: 1.5rem;
+		margin-bottom: @margin-bottom;
+
+		@media (max-width:500px) {
+			font-size: 0.9rem !important;
+		}
+	}
+}
+
+section#footer.main {
+	margin-top: 1000px;
+	background: #cc8d76;
+	margin-bottom: 0;
+	width: 100vw;
+
+	footer {
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		.main-body-text();
+
+		p {
+			.main-body-text();
+		}
+
+		address	{
+			a {
+				text-decoration: none;
+				color: white;	
+				.main-body-text();
+			}
+		}
+	}
+}

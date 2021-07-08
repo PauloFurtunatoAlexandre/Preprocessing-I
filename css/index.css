@@ -1,1 +1,390 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.top-links {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+}
+.main-body-text {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+.title-text {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+.main {
+  width: 80vw;
+  margin: 20px auto;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .main {
+    margin: 0;
+  }
+}
+.main h2 {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.main .logo-naruto {
+  position: fixed;
+  display: block;
+  left: 5%;
+  top: 20px;
+  height: auto;
+  width: 400px;
+  z-index: 3;
+  transform: rotate(350deg);
+}
+@media (max-width: 500px) {
+  .main .logo-naruto {
+    top: 26px;
+    left: 13%;
+    position: fixed;
+    width: 300px;
+  }
+}
+.main nav {
+  align-items: center;
+  position: fixed;
+  height: 3vh;
+  display: flex;
+  justify-content: center;
+  background-color: #363636;
+  padding: 20px;
+  width: 80%;
+  margin-top: 20px;
+  border-top: 20px solid #f05321;
+  z-index: 2;
+}
+@media (max-width: 500px) {
+  .main nav {
+    flex-direction: row;
+    height: 10vh;
+    top: 8rem;
+    width: 100%;
+  }
+}
+.main nav a {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+.main nav a:hover {
+  color: #f05321;
+}
+.main-body {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin: 20px auto 120px;
+  align-items: flex-end;
+}
+@media (max-width: 500px) {
+  .main-body {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+.main-body .box {
+  background-color: #eee;
+  padding: 32px;
+  margin: 20px 20px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  .main-body .box {
+    width: 100%;
+  }
+}
+.main-body h2 {
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.main-body p,
+.main-body li {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .main-body p,
+  .main-body li {
+    font-size: 0.9rem !important;
+    line-height: 1rem;
+  }
+}
+section#life-story.main-body {
+  margin-top: 100px;
+}
+section#life-story.main-body .box {
+  margin: 0;
+}
+@media (max-width: 500px) {
+  section#life-story.main-body img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: -40px;
+  }
+}
+section#skills.main-body {
+  background-image: url("../images/Konohagakure_Post_War.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  section#skills.main-body {
+    width: 100vw;
+  }
+}
+section#skills.main-body .box {
+  margin: 0;
+}
+section#skills.main-body img.naturo-rasengan {
+  position: absolute;
+  width: 30rem;
+  top: -11%;
+  right: 25%;
+  z-index: 1;
+}
+@media (max-width: 500px) {
+  section#skills.main-body img.naturo-rasengan {
+    right: 2%;
+    top: -45px;
+    width: 50%;
+  }
+}
+section#friends.main {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+}
+@media (max-width: 500px) {
+  section#friends.main {
+    flex-direction: column;
+  }
+}
+section#friends.main h2.friends-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+section#friends.main .naruto-friend {
+  padding: 50px;
+  width: 33vw;
+  background: #ffb68c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #ffb68c 0%, #cc8d76 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #ffb68c 0%, #cc8d76 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ffb68c 0%, #cc8d76 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb68c', endColorstr='#cc8d76', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+@media (max-width: 500px) {
+  section#friends.main .naruto-friend {
+    width: 100%;
+    padding: 50px;
+  }
+}
+section#friends.main .naruto-friend img {
+  max-width: 100%;
+  background: #eee;
+  padding: 60px;
+}
+section#friends.main p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  section#friends.main p {
+    font-size: 0.9rem !important;
+  }
+}
+section#footer.main {
+  margin-top: 1000px;
+  background: #cc8d76;
+  margin-bottom: 0;
+  width: 100vw;
+}
+section#footer.main footer {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+section#footer.main footer p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+section#footer.main footer address a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
